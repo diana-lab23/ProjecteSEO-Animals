@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog de cura canina | Woof &amp; Wash</title>
+  <meta name="description"
+    content="Consells de perruqueria canina, cura de la pell i alimentació per a gossos. El blog de Woof &amp; Wash, a Sant Cugat del Vallès.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;700&family=Lora:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="enlace-saltar-contenido" href="#contenido">Anar al contenido</a>
+
+  <!-- HEADER i FOOTER: idèntics a totes les pàgines. aria-current marca la pàgina on ets -->
+  <header class="cabecera-principal">
+    <a class="logotipo" href="index.html" aria-label="Woof &amp; Wash, inici">Woof &amp; Wash</a>
+    <nav aria-label="Menú principal">
+      <ul class="menu-navegacion">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+      </ul>
+    </nav>
+
+    <label class="oculto-accesible" for="idioma">Idioma</label>
+    <select id="idioma" name="idioma">
+      <option value="ca" selected>Català</option>
+      <option value="es">Castellano</option>
+      <option value="en">English</option>
+    </select>
+  </header>
+
+  <main id="contenido">
+    <!-- Capçalera de la pàgina: H1 amb la paraula clau principal del blog -->
+    <section class="cabecera-pagina">
+      <h1>Blog de cura canina</h1>
+      <p class="texto-introductorio introduccion-blog">
+        Consells de perruqueria canina, alimentació i benestar per al teu gos, escrits per l'equip de
+        Woof &amp; Wash a Sant Cugat del Vallès.
+      </p>
+    </section>
+
+    <!-- Llistat d'articles. Cada un és un ARTICLE amb la seva pròpia data i paraules clau -->
+    <section aria-labelledby="titulo-articulos">
+      <h2 id="titulo-articulos" class="oculto-accesible">Articles del blog</h2>
+      <div class="rejilla-blog">
+
+        <article class="articulo-blog">
+          <time datetime="2026-05-10">10 de maig de 2026</time>
+          <h2>Cada quant s'ha de banyar un gos? Guia completa</h2>
+          <ul class="etiquetas-articulo">
+            <li>Bany per a gossos</li>
+            <li>Perruqueria canina Barcelona</li>
+          </ul>
+          <p>
+            Molts propietaris no saben exactament cada quant s'ha de banyar un gos. T'expliquem la freqüència
+            recomanada segons el pelatge i per què banyar-lo molt de seguit també té els seus riscos.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+        </article>
+
+        <article class="articulo-blog">
+          <time datetime="2026-01-12">12 de gener de 2026</time>
+          <h2>Com preparar el teu gos per al primer bany a la perruqueria canina</h2>
+          <ul class="etiquetas-articulo">
+            <li>Perruqueria canina</li>
+            <li>Bany per a gossos</li>
+          </ul>
+          <p>
+            El primer bany pot generar nervis, tant al gos com a tu. Passejar-lo abans de la cita, deixar-lo
+            una estona tranquil al transportí i evitar donar-li menjar just abans ajuda que arribi a la
+            perruqueria canina més relaxat. A Woof &amp; Wash adaptem el ritme a cada gos perquè l'experiència
+            sigui positiva des del primer dia.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+        </article>
+
+        <article class="articulo-blog">
+          <time datetime="2026-02-03">3 de febrer de 2026</time>
+          <h2>Quin tall de pèl per gos és millor segons la raça</h2>
+          <ul class="etiquetas-articulo">
+            <li>Tall de pèl per gos</li>
+            <li>Raça</li>
+          </ul>
+          <p>
+            No tots els pelatges necessiten el mateix tall de pèl per gos. Les races de pèl dur, com el
+            Schnauzer o el Westy, es beneficien del stripping, mentre que les de pèl llarg solen necessitar
+            un desllanat més freqüent. Triar bé la tècnica evita problemes de pell i allarga el temps entre
+            visites a la perruqueria canina.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+
+        </article>
+
+        <article class="articulo-blog">
+          <time datetime="2026-02-20">20 de febrer de 2026</time>
+          <h2>5 senyals que el teu gos necessita un desllanat</h2>
+          <ul class="etiquetas-articulo">
+            <li>Desllanat caní</li>
+            <li>Cura del pelatge</li>
+          </ul>
+          <p>
+            Pèl mort acumulat, nusos a les orelles i a la cua, picor freqüent o un pelatge que ha perdut
+            brillantor són senyals habituals que convé fer un desllanat. Fer-ho amb regularitat redueix la
+            quantitat de pèl que el gos deixa a casa i millora la seva comoditat durant tot l'any.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+
+        </article>
+
+        <article class="articulo-blog" id="piel-sensible">
+          <time datetime="2026-03-08">8 de març de 2026</time>
+          <h2>Cura de la pell sensible en gossos: guia bàsica</h2>
+          <ul class="etiquetas-articulo">
+            <li>Pell sensible gossos</li>
+            <li>Productes hipoal·lergènics</li>
+          </ul>
+          <p>
+            Picor, envermelliment o caspa poden ser senyal de pell sensible. En aquests casos, fem servir
+            xampús hipoal·lergènics i allarguem els temps d'esbandida per no deixar residus. Si el teu gos
+            té la pell delicada, consulta'ns abans de la cita perquè puguem preparar el tractament adequat.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+        </article>
+
+        <article class="articulo-blog" id="collar-correa">
+          <time datetime="2026-03-22">22 de març de 2026</time>
+          <h2>Com triar el collar i la corretja adequats per al teu gos</h2>
+          <ul class="etiquetas-articulo">
+            <li>Collars per a gossos</li>
+            <li>Corretges</li>
+          </ul>
+          <p>
+            Un collar o arnès mal ajustat pot provocar rascades o, fins i tot, que el gos s'escapi. Com a
+            norma general, hauries de poder passar dos dits entre el collar i el coll. Els arnesos
+            distribueixen millor la pressió en gossos que estiren molt de la corretja.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+        </article>
+
+        <article class="articulo-blog" id="alimentacion-etiqueta">
+          <time datetime="2026-04-05">5 d'abril de 2026</time>
+          <h2>Alimentació canina: com llegir l'etiqueta del pinso</h2>
+          <ul class="etiquetas-articulo">
+            <li>Alimentació canina</li>
+            <li>Pinso per a gossos</li>
+          </ul>
+          <p>
+            A l'etiqueta del pinso, els ingredients apareixen ordenats de més a menys quantitat. Busca que la
+            proteïna animal aparegui entre els primers llocs i desconfia dels pinsos amb molts cereals de
+            farciment. A la nostra botiga t'ajudem a triar l'opció més adequada per a l'edat i la mida del
+            teu gos.
+          </p>
+          <a class="boton boton-secundario" href="cada-quant-banyar-gos.html">Llegeix l'article complet</a>
+
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="pie-principal">
+      <p>© 2026 Woof &amp; Wash. Tots els drets reservats.</p>
+    </footer>
+</body>
+
+</html>

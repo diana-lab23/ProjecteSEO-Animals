@@ -1,0 +1,529 @@
+/* =========================================================
+   WOOF & WASH — full d'estil (NOMÉS el que fan servir index.html i blog.html)
+   Ordre: 1 Variables · 2 Base · 3 Capçalera · 4 Botons ·
+          5 Seccions · 6 Peu · 7 Pantalles grans · 8 Text SEO ·
+          9 Vista prèvia del blog · 10 Preguntes freqüents
+   ========================================================= */
+
+/* 1. VARIABLES: canvia un color aquí i es canvia a tota la web */
+:root {
+  --azul-oscuro: #2b4c7e;   /* títols, logo, text destacat */
+
+  --azul-medio: #4a6fa5;    /* vores, enllaços, detalls */
+  --azul-claro: #c9ddf8;    /* fons de targetes i capçalera */
+  --azul-cielo: #eaf2ff;    /* fons general */
+
+  --blanco: #ffffff;
+  --color-texto: #1f2a3a;   /* color del text normal */
+
+  --fuente-logotipo: "Dancing Script", cursive;
+  --fuente-titulos: "Lora", Georgia, serif;
+  --fuente-texto: "DM Sans", system-ui, sans-serif;
+
+  --radio-borde: 14px;  /* arrodoniment dels elements */
+
+  --ancho-maximo: 1100px;   /* amplada màxima del contingut */
+
+}
+
+/* 2. BASE: regles generals */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* les mides inclouen vora i padding */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+/* desplaçament suau en clicar el menú, sense que la capçalera fixa tapi el títol */
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  line-height: 1.6;
+  color: var(--color-texto);
+  background: var(--azul-cielo);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--azul-oscuro);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);   /* clamp = mida que s'adapta a la pantalla */
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  margin: 0 0 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0 0 .5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;   /* les imatges mai surten de la pantalla */
+}
+
+a {
+  color: var(--azul-medio);
+}
+
+/* Contorn visible quan es navega amb el teclat (accessibilitat) */
+:focus-visible {
+  outline: 3px solid var(--azul-oscuro);
+  outline-offset: 3px;
+}
+
+/* Amaga un element a la vista però el deixa als lectors de pantalla */
+.oculto-accesible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Enllaç "Anar al contingut": només apareix en tabular */
+.enlace-saltar-contenido {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: .6rem 1rem;
+  border-radius: var(--radio-borde);
+  z-index: 20;
+}
+
+.enlace-saltar-contenido:focus {
+  top: 1rem;
+}
+
+/* 3. CAPÇALERA: logo + menú + botó + idioma */
+.cabecera-principal {
+  position: sticky;  top: 0; z-index: 10;     /* es queda fixa a dalt en fer scroll */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1.5rem;
+  padding: .75rem 1.25rem;
+  background: linear-gradient(var(--azul-cielo), var(--azul-claro));
+  border-bottom: 3px solid var(--azul-medio);
+}
+
+.logotipo {
+  font-family: var(--fuente-logotipo);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--azul-oscuro);
+  text-decoration: none;
+}
+
+.menu-navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-navegacion a {
+  font-family: var(--fuente-titulos);
+  font-weight: 500;
+  color: var(--azul-medio);
+  text-decoration: none;
+  padding: .25rem 0;
+}
+
+.menu-navegacion a:hover,
+.menu-navegacion a[aria-current="page"] {
+  color: var(--azul-oscuro);
+  border-bottom: 2px solid var(--azul-oscuro);
+}
+
+select {
+  font: inherit;
+  padding: .4rem .6rem;
+  border: 2px solid var(--azul-oscuro);
+  border-radius: 8px;
+  background: var(--blanco);
+}
+
+/* 4. BOTONS */
+.boton {
+  display: inline-block;
+  padding: .75rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid var(--azul-oscuro);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, color .2s;      /* el canvi de color en passar el ratolí */
+}
+
+/* acció principal */
+.boton-principal {        
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+
+.boton-principal:hover {
+  background: var(--azul-medio);
+  border-color: var(--azul-medio);
+}
+
+/* acció secundària */
+.boton-secundario {
+  background: transparent;
+  color: var(--azul-oscuro);
+}
+
+
+.boton-secundario:hover {
+  background: var(--azul-claro);
+}
+
+/* 5. SECCIONS */
+/* Centra el contingut i dóna espai a cada bloc */
+main>section {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+}
+
+/* Portada: text + foto (una sota l'altra al mòbil) */
+.portada {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.texto-introductorio {
+  font-size: 1.15rem;
+  max-width: 55ch;  /* 55ch = línies de ~55 lletres, més fàcil de llegir */
+}
+
+.imagen-portada img {
+  border: 6px solid var(--azul-medio);
+  border-radius: var(--radio-borde);
+  background: var(--azul-claro);  /* color de fons mentre no hi ha foto */
+  aspect-ratio: 4 / 3; object-fit: cover; width: 100%; /* retalla la foto sense deformar-la */
+  
+}
+
+/* Quadrícula adaptable: tantes columnes com càpiguen (mínim 230px) */
+.rejilla {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+/* Targetes de serveis */
+#servicios article {
+  background: var(--blanco);
+  padding: 1.5rem;
+  border-radius: var(--radio-borde);
+  border-left: 6px solid var(--azul-medio);
+}
+
+#servicios article p {
+  margin: 0;
+}
+
+/* Bloc "Per què triar-nos": franja de fons més fosc a tot l'ample */
+.por-que-elegirnos {
+  max-width: none;
+  background: var(--azul-claro);
+}
+
+.por-que-elegirnos h2,
+.por-que-elegirnos ul {
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+}
+
+.por-que-elegirnos ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Botiga (bloc de la portada): foto + peu */
+figure {
+  margin: 0;
+}
+
+#tienda img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  border-radius: var(--radio-borde);
+  background: var(--azul-claro);
+}
+
+figcaption {
+  margin-top: .5rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 500;
+  color: var(--azul-oscuro);
+}
+
+/* 6. PEU DE PÀGINA */
+.pie-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  background: var(--azul-oscuro);
+  color: var(--azul-claro);
+}
+
+.pie-principal p {
+  margin: 0;
+}
+
+/* 7. PANTALLES GRANS (a partir de 800px): portada en dues columnes */
+@media (min-width: 800px) {
+  .portada {
+    grid-template-columns: 1.1fr 1fr;
+  }
+
+  .por-que-elegirnos ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Respecta qui té desactivades les animacions al seu dispositiu */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .boton {
+    transition: none;
+  }
+}
+
+/* 8. TEXT DE PRESENTACIÓ (bloc SEO amb les paraules clau, al final de la portada) */
+.texto-posicionamiento {
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  padding: 2rem;
+  margin: 0;
+  text-align: justify;
+}
+
+.texto-posicionamiento p {
+  margin: 0 0 1rem;
+}
+
+.texto-posicionamiento p:last-child {
+  margin-bottom: 0;
+}
+
+.texto-posicionamiento h2 {
+  margin-top: 1rem;
+}
+
+/* Recuadro de resposta ràpida, just a dalt de l'article */
+.resposta-rapida {
+  background: var(--azul-claro);
+  border-left: 6px solid var(--azul-medio);
+  border-radius: var(--radio-borde);
+  padding: 1rem 1.25rem;
+  margin: 0 0 2rem;
+}
+
+.resposta-rapida p {
+  margin: 0;
+}
+
+.resposta-rapida strong {
+  color: var(--azul-oscuro);
+}
+
+/* Disposició de l'article: contingut + índex lateral */
+.disposicion-articulo {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Índex lateral de l'article */
+.indice-articulo {
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+}
+
+.indice-articulo h2 {
+  font-size: 1.1rem;
+  margin-bottom: .75rem;
+}
+
+.indice-articulo ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: .6rem;
+}
+
+.indice-articulo a {
+  font-weight: 500;
+}
+
+@media (min-width: 800px) {
+  .disposicion-articulo {
+    grid-template-columns: 1fr 260px;
+    grid-template-areas: "contingut index";
+  }
+
+  .disposicion-articulo>.texto-posicionamiento {
+    grid-area: contingut;
+  }
+
+  .disposicion-articulo>.indice-articulo {
+    grid-area: index;
+    position: sticky;
+    top: 5.5rem;
+  }
+}
+
+/* Títol i introducció de la pàgina del blog */
+.cabecera-pagina {
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.cabecera-pagina h1 {
+  margin-bottom: .5rem;
+}
+
+.cabecera-pagina+section {
+  padding-top: 1rem;    /* evita que hi hagi un espai massa gran amb el contingut que ve just després */
+}
+
+/* 9. VISTA PRÈVIA DEL BLOG (mateixes targetes que fa servir blog.html) */
+.rejilla-blog {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.articulo-blog {
+  display: flex;
+  flex-direction: column;
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  border-left: 6px solid var(--azul-medio);
+}
+
+.articulo-blog time {
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--azul-medio);
+}
+
+.articulo-blog h2,
+.articulo-blog h3 {
+  font-size: 1.3rem;
+  margin: .35rem 0 .6rem;
+}
+
+.articulo-blog p {
+  margin: 0 0 .75rem;
+}
+
+.articulo-blog .boton {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.etiquetas-articulo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  list-style: none;
+  margin: 0 0 .9rem;
+  padding: 0;
+}
+
+.etiquetas-articulo li {
+  background: var(--azul-claro);
+  color: var(--azul-oscuro);
+  font-size: .8rem;
+  font-weight: 500;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+}
+
+.llamada-accion-blog {
+  text-align: center;
+}
+
+/* 10. PREGUNTES FREQÜENTS (DETAILS/SUMMARY, sense JavaScript) */
+.lista-preguntas-frecuentes {
+  display: grid;
+  gap: 1rem;
+  max-width: 70ch;
+  margin: 0;
+}
+
+.pregunta-frecuente {
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  padding: 1rem 1.25rem;
+}
+
+.pregunta-frecuente summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+.pregunta-frecuente summary::-webkit-details-marker {
+  display: none;
+}
+
+/* amaga la fletxa per defecte de Chrome/Safari */
+.pregunta-frecuente summary::after {
+  content: "+";
+  flex: none;
+  font-size: 1.3rem;
+  color: var(--azul-medio);
+}
+
+.pregunta-frecuente[open] summary::after {
+  content: "–";
+}
+
+.pregunta-frecuente p {
+  margin: .75rem 0 0;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Idioma de la pàgina: ajuda els buscadors i els lectors de pantalla -->
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Fa que la web s'adapti al mòbil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- El títol de la pestanya i el que apareix a Google (màx. ~60 caràcters) -->
+  <title>Woof &amp; Wash | Perruqueria canina i botiga a Sant Cugat del Vallès</title>
+  <!-- La descripció que Google mostra sota el títol (màx. ~155 caràcters) -->
+  <meta name="description"
+    content="Perruqueria canina professional i botiga d'accessoris a Sant Cugat del Vallès. Banys, talls i tractaments per a cada tipus de pelatge. Demana cita.">
+
+  <!-- Tipografies: Dancing Script (logotipo), Lora (títols), DM Sans (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DM+Sans:wght@400;500;700&family=Lora:wght@500;700&display=swap"
+    rel="stylesheet">
+  <!-- Full d'estil -->
+  <link rel="stylesheet" href="estilo1.css">
+
+</head>
+
+<body>
+
+  <!-- Enllaç invisible que apareix amb el teclat: deixa saltar el menú i anar al contenido -->
+  <a class="enlace-saltar-contenido" href="#contenido">Anar al contenido</a>
+
+  <!-- HEADER: capçalera de tota la web (logotipo + menú). Es repeteix a totes les pàgines -->
+  <header class="cabecera-principal">
+    <!-- Logo: és un enllaç a l'inici -->
+    <a class="logotipo" href="index.html" aria-label="Woof &amp; Wash, inici">Woof &amp; Wash</a>
+
+    <!-- NAV: bloc de navegació principal. aria-label l'identifica per als lectors de pantalla -->
+    <nav aria-label="Menú principal">
+      <ul class="menu-navegacion">
+        <li><a href="index.html" aria-current="page">Inici</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Selector d'idioma. El label és invisible però necessari per accessibilitat -->
+    <label class="oculto-accesible" for="idioma">Idioma</label>
+    <select id="idioma" name="idioma">
+      <option value="ca" selected>Català</option>
+      <option value="es">Castellano</option>
+      <option value="en">English</option>
+    </select>
+  </header>
+
+  <!-- MAIN: el contenido únic d'aquesta pàgina (només n'hi pot haver un) -->
+  <main id="contenido">
+
+    <!-- SECTION: portada. És el primer que veu el visitant -->
+    <section class="portada" aria-labelledby="titulo-portada">
+      <div class="texto-portada">
+        <!-- H1: títol principal. N'hi ha d'haver UN sol per pàgina; és el que més pesa per a Google -->
+        <h1 id="titulo-portada">Perruqueria canina i botiga d'animals a Barcelona</h1>
+
+        <!-- SECTION: text de presentació per a cercadors, amb les paraules clau principals -->
+        <section aria-labelledby="titulo-presentacion">
+          <div class="texto-posicionamiento">
+            <p>
+              Woof &amp; Wash és una perruqueria canina situada a Sant Cugat del Vallès, a l'àrea de Barcelona,
+              especialitzada en la cura i el benestar del teu gos. Oferim un servei de perruqueria canina complet:
+              bany relaxant, tall de pèl segons raça, desllanat i higiene completa, sempre amb un tracte suau i
+              personalitzat. Si busques una perruqueria canina de confiança a prop de Barcelona, al nostre centre
+              de Sant Cugat del Vallès trobaràs professionals que coneixen les necessitats de cada pelatge i de
+              cada gos.
+            </p>
+            <p>
+              A més de la perruqueria canina, disposem d'una botiga d'animals amb una selecció de productes
+              pensats per al dia a dia del teu gos: alimentació de qualitat, joguines, collars, corretges, llits i
+              productes de cura. La nostra botiga d'animals a l'àrea de Barcelona treballa amb marques reconegudes
+              perquè, tant si véns per un servei de perruqueria canina com si només necessites reposar
+              l'alimentació del teu gos, trobis tot el que et cal en un sol lloc.
+            </p>
+            <p>
+              Entenem que triar una perruqueria canina a Barcelona o al seu entorn no és només una qüestió de
+              proximitat, sinó de confiança. Per això, a cada visita adaptem el ritme del bany i del tall al
+              caràcter del gos, i t'expliquem les recomanacions de cura del pelatge perquè puguis mantenir-lo net i
+              sa entre visita i visita. La nostra botiga d'animals complementa aquest servei amb consells sobre
+              alimentació, joguines adequades a cada edat i accessoris que fan més còmoda la vida diària amb el teu
+              gos.
+            </p>
+            <p>
+              Si estàs buscant una perruqueria canina i botiga d'animals a Barcelona o a la comarca del Vallès
+              Occidental, a Woof &amp; Wash t'oferim un espai proper, net i pensat perquè el teu gos surti content
+              de cada visita. Demana cita per al servei de perruqueria canina que necessitis o passa per la nostra
+              botiga d'animals per descobrir els productes que tenim per a tu i per al teu pelut.
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- FIGURE: imatge amb significat. Canvia src per la teva foto real; alt descriu la imatge -->
+      <figure class="imagen-portada">
+        <img src="img/portada.jpg" alt="Un gos content després del bany a Woof &amp; Wash" width="640" height="480">
+      </figure>
+    </section>
+
+    <!-- SECTION: serveis. Cada servei és un ARTICLE (peça independent amb sentit propi) -->
+    <section id="servicios" aria-labelledby="titulo-servicios">
+      <h2 id="titulo-servicios">Serveis de perruqueria canina</h2>
+      <div class="rejilla">
+        <article>
+          <h3>Bany relaxant</h3>
+          <p>Aigua tèbia i productes suaus adaptats al teu gos.</p>
+        </article>
+        <article>
+          <h3>Tall per raça</h3>
+          <p>Perruqueria específica segons el pelatge i la raça.</p>
+        </article>
+        <article>
+          <h3>Desllanat i higiene</h3>
+          <p>Treiem el pèl mort i fem la higiene completa: ungles, orelles i potes.</p>
+        </article>
+        <article>
+          <h3>Pell sensible</h3>
+          <p>Tractaments específics per a gossos amb la pell delicada. Consulta'ns.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: arguments per triar-vos. UL = llista sense ordre -->
+    <section class="por-que-elegirnos" aria-labelledby="titulo-por-que-elegirnos">
+      <h2 id="titulo-por-que-elegirnos">Per què triar Woof &amp; Wash</h2>
+      <ul>
+        <li><strong>Atenció personalitzada.</strong> Cada gos té el seu ritme i el respectem.</li>
+        <li><strong>Productes de qualitat.</strong> Marques reconegudes i materials respectuosos.</li>
+        <li><strong>Tracte tranquil.</strong> Treballem amb calma perquè es senti segur.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION: botiga. Cada categoria és un FIGURE amb FIGCAPTION (peu de foto) -->
+    <section id="tienda" aria-labelledby="titulo-tienda">
+      <h2 id="titulo-tienda">A la botiga trobaràs</h2>
+      <div class="rejilla">
+        <figure><img src="img/alimentacio.jpg" alt="Pinsos i snacks" width="320" height="240" loading="lazy">
+          <figcaption>Alimentació</figcaption>
+        </figure>
+        <figure><img src="img/joguines.jpg" alt="Joguines per a gossos" width="320" height="240" loading="lazy">
+          <figcaption>Joguines</figcaption>
+        </figure>
+        <figure><img src="img/collars.jpg" alt="Collars i corretges" width="320" height="240" loading="lazy">
+          <figcaption>Collars i corretges</figcaption>
+        </figure>
+        <figure><img src="img/llits.jpg" alt="Llits i mantes" width="320" height="240" loading="lazy">
+          <figcaption>Llits</figcaption>
+        </figure>
+      </div>
+      <!-- loading="lazy": les imatges es carreguen només quan el visitant hi arriba -->
+    </section>
+
+    <!-- SECTION: vista prèvia del blog. Mostra els 3 articles més recents i enllaça a blog.html -->
+    <section aria-labelledby="titulo-blog">
+      <h2 id="titulo-blog">Últimes entrades del blog</h2>
+      <div class="rejilla-blog">
+
+        <article class="articulo-blog">
+          <time datetime="2026-03-08">8 de març de 2026</time>
+          <h3>Cura de la pell sensible en gossos: guia bàsica</h3>
+          <p>Picor, envermelliment o caspa poden ser senyal de pell sensible. Et comptem com ho tractem a la perruqueria
+            i quins productes fem servir.</p>
+          <a class="boton boton-secundario" href="blog.html#piel-sensible">Llegeix l'article</a>
+        </article>
+
+        <article class="articulo-blog">
+          <time datetime="2026-03-22">22 de març de 2026</time>
+          <h3>Com triar el collar i la corretja adequats per al teu gos</h3>
+          <p>Un collar mal ajustat pot provocar rascades o que el gos s'escapi. Et donem els criteris bàsics per triar
+            bé.</p>
+          <a class="boton boton-secundario" href="blog.html#collar-correa">Llegeix l'article</a>
+        </article>
+
+        <article class="articulo-blog">
+          <time datetime="2026-04-05">5 d'abril de 2026</time>
+          <h3>Alimentació canina: com llegir l'etiqueta del pinso</h3>
+          <p>No tots els pinsos són iguals. T'expliquem què mirar a l'etiqueta per triar el més adequat per al teu gos.
+          </p>
+          <a class="boton boton-secundario" href="blog.html#alimentacion-etiqueta">Llegeix l'article</a>
+        </article>
+
+      </div>
+      <div class="llamada-accion-blog">
+        <a class="boton boton-principal" href="blog.html">Veure tots els articles</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: peu de pàgina. Xarxes i enllaços legals (obligatoris a Espanya) -->
+  <footer class="pie-principal">
+    <p>© 2026 Woof &amp; Wash. Tots els drets reservats.</p>
+  </footer>
+
+</body>
+
+</html>
